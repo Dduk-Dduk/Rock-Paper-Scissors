@@ -8,5 +8,8 @@ function getComputerChoice() {
         return("Scissors")
     }
 }
-getComputerChoice()
+console.log(getComputerChoice())
 
+function getHumanChoice(){
+    
+}
