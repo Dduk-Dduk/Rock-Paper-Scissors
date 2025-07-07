@@ -1,3 +1,5 @@
+let humanScore = 0
+let computerScore = 0
 function getComputerChoice() {
     let number = Math.random() * 3
     if (number < 1) {
@@ -8,7 +10,6 @@ function getComputerChoice() {
         return("Scissors")
     }
 }
-console.log(getComputerChoice())
 
 function getHumanChoice(){
     let number = parseInt(prompt("0 for Rock, 1 for Paper, 2 for Scissors!"))
@@ -20,5 +21,3 @@ function getHumanChoice(){
         return "Scissors"
     }
 }
-
-console.log(getHumanChoice())
