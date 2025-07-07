@@ -20,3 +20,5 @@ function getHumanChoice(){
         return "Scissors"
     }
 }
+
+console.log(getHumanChoice())
