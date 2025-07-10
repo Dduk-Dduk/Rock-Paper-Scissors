@@ -12,12 +12,35 @@ function getComputerChoice() {
 }
 
 function getHumanChoice(){
-    let number = parseInt(prompt("0 for Rock, 1 for Paper, 2 for Scissors!"))
-    if(number === 0){
+    let choice = (prompt("Insert rock, paper or scissors!")).toLowerCase()
+    if(choice === "rock"){
         return "Rock"
-    } else if (number === 1){
+    } else if (choice === "paper"){
         return "Paper"
     } else {
         return "Scissors"
+    }
+}
+
+
+function playRound(humanChoice, computerChoice){
+    if (humanChoice === "Rock"){
+        if (computerChoice === "Scissors"){
+            
+        } else if (computerChoice === "Paper"){
+
+        } else {
+
+        }
+    } else if (humanChoice === "Paper"){
+        if(computerChoice === "Rock"){
+            
+        } else if (computerChoice === "Scissors"){
+
+        } else {
+
+        }
+    } else {
+
     }
 }
