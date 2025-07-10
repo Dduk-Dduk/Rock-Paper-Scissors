@@ -59,5 +59,10 @@ function playRound(humanChoice, computerChoice){
 
 const humanPick = getHumanChoice()
 const computerPick = getComputerChoice()
-
+console.log(humanPick)
+console.log(computerPick)
 playRound(humanPick, computerPick)
+
+function playGame(){
+    
+}
