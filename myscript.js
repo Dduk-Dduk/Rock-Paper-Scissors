@@ -56,3 +56,8 @@ function playRound(humanChoice, computerChoice){
         }
     }
 }
+
+const humanPick = getHumanChoice()
+const computerPick = getComputerChoice()
+
+playRound(humanPick, computerPick)
