@@ -1,5 +1,4 @@
-let humanScore = 0
-let computerScore = 0
+
 function getComputerChoice() {
     let number = Math.random() * 3
     if (number < 1) {
@@ -23,7 +22,10 @@ function getHumanChoice(){
 }
 
 
-function playRound(humanChoice, computerChoice){
+function playGame(){
+    let humanScore = 0
+    let computerScore = 0
+    function playRound(humanChoice, computerChoice){
     if (humanChoice === "Rock"){
         if (computerChoice === "Scissors"){
             console.log("You win! Rock beats Scissors!")
@@ -55,14 +57,12 @@ function playRound(humanChoice, computerChoice){
             console.log("It's a tie!")
         }
     }
-}
+}    
+    for(let i = 0; i < 5; i++){
+        const humanPick = getHumanChoice()
+        const computerPick = getComputerChoice()
+        playRound(humanPick, computerPick)
+    }
 
-const humanPick = getHumanChoice()
-const computerPick = getComputerChoice()
-console.log(humanPick)
-console.log(computerPick)
-playRound(humanPick, computerPick)
 
-function playGame(){
-    
 }
