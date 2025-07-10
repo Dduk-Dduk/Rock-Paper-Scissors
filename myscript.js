@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
     let number = Math.random() * 3
     if (number < 1) {
@@ -63,6 +62,6 @@ function playGame(){
         const computerPick = getComputerChoice()
         playRound(humanPick, computerPick)
     }
-
-
 }
+
+playGame()
