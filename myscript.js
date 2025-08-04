@@ -1,3 +1,5 @@
+const results = document.querySelector("#results")
+
 function getComputerChoice() {
     let number = Math.random() * 3
     if (number < 1) {
@@ -27,13 +29,13 @@ function playGame(){
     function playRound(humanChoice, computerChoice){
         if (humanChoice === "Rock"){
             if (computerChoice === "Scissors"){
-                console.log("You win! Rock beats Scissors!")
+                results.textContent = "You win! Rock beats Scissors!"
                 humanScore += 1
             } else if (computerChoice === "Paper"){
-                console.log("You lose! Paper beats Rock!")
+                results.textContent = "You lose! Paper beats Rock!"
                 computerScore += 1
             } else {
-                console.log("It's a tie!")
+                results.textContent = "It's a tie!"
             }
         } else if (humanChoice === "Paper"){
             if(computerChoice === "Rock"){
