@@ -63,3 +63,10 @@ function playGame(){
 playGame()
 
 // Create three buttons for rock, paper and scissors
+const buttonRock = document.createElement("button")
+const buttonPaper = document.createElement("Paper")
+const buttonScissors = document.createElement("Scissors")
+
+buttonRock.addEventListener("click", playRound("Rock", getComputerChoice()))
+buttonPaper.addEventListener("click", playRound("Paper", getComputerChoice()))
+buttonScissors.addEventListener("click", playRound("Scissors", getComputerChoice()))
