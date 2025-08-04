@@ -1,4 +1,7 @@
+let humanScore = 0
+let computerScore = 0
 const results = document.querySelector("#results")
+const score = document.querySelector("#score")
 
 function getComputerChoice() {
     let number = Math.random() * 3
@@ -24,8 +27,6 @@ function getHumanChoice(){
 
 
 function playGame(){
-    let humanScore = 0
-    let computerScore = 0
     function playRound(humanChoice, computerChoice){
         if (humanChoice === "Rock"){
             if (computerChoice === "Scissors"){
