@@ -60,10 +60,16 @@ function playRound(humanChoice, computerChoice){
     }
     if(humanScore === 5){
         score.textContent = "You win the game!"
-    } else {
+    } else if (computerScore === 5){
         score.textContent = "Computer wins the game!"
     }
 }  
+
+function resetGame() {
+    humanScore = 0
+    computerScore = 0
+    document.querySelector("#results") = ""
+}
     
 
 const buttonRock = document.querySelector("#rock")
