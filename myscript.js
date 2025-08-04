@@ -49,13 +49,13 @@ function playGame(){
             }
         } else {
             if (computerChoice === "Paper"){
-                console.log("You win! Scissors beats Paper!")
+                results.textContent = "You win! Scissors beats Paper!"
                 humanScore += 1
             } else if (computerChoice === "Rock"){
-                console.log("You lose! Rock beats scissors!")
+                results.textContent = "You lose! Rock beats scissors!"
                 computerScore += 1
             } else {
-                console.log("It's a tie!")
+                results.textContent = "It's a tie!"
             }
         }
     }   
