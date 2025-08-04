@@ -66,8 +66,10 @@ function playRound(humanChoice, computerChoice){
 
     if(humanScore === 5){
         score.textContent = "You win the game!"
+        resetGame()
     } else if (computerScore === 5){
         score.textContent = "Computer wins the game!"
+        resetGame()
     }
 }  
 
