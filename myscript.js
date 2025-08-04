@@ -27,6 +27,7 @@ function getHumanChoice(){
 
 
 function playGame(){
+    score.textContent = `Player: ${humanScore} | Computer: ${computerScore}`
     function playRound(humanChoice, computerChoice){
         if (humanChoice === "Rock"){
             if (computerChoice === "Scissors"){
@@ -59,8 +60,15 @@ function playGame(){
                 results.textContent = "It's a tie!"
             }
         }
-    }   
-    playRound() 
+    }  
+    while (humanScore !== 5 || computerScore !== 5){
+        playRound()
+    }
+    if(humanScore === 5){
+        score.textContent = "You win the game!"
+    } else {
+        score.textContent = "Computer wins the game!"
+    }
 }
 
 playGame()
