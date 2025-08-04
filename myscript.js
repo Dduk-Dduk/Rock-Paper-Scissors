@@ -61,12 +61,10 @@ function playGame(){
 }
 
 playGame()
+const buttonRock = document.querySelector("#rock")
+const buttonPaper = document.querySelector("#paper")
+const buttonScissors = document.querySelector("#scissors")
 
-// Create three buttons for rock, paper and scissors
-const buttonRock = document.createElement("button")
-const buttonPaper = document.createElement("Paper")
-const buttonScissors = document.createElement("Scissors")
-
-buttonRock.addEventListener("click", playRound("Rock", getComputerChoice()))
-buttonPaper.addEventListener("click", playRound("Paper", getComputerChoice()))
-buttonScissors.addEventListener("click", playRound("Scissors", getComputerChoice()))
+buttonRock.addEventListener("click", () => {playRound("Rock", getComputerChoice())})
+buttonPaper.addEventListener("click", () => {playRound("Paper", getComputerChoice())})
+buttonScissors.addEventListener("click", () => {playRound("Scissors", getComputerChoice())})
