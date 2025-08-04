@@ -25,15 +25,16 @@ function getHumanChoice(){
     }
 }
 
-score.textContent = `Player: ${humanScore} | Computer: ${computerScore}`
 function playRound(humanChoice, computerChoice){
     if (humanChoice === "Rock"){
         if (computerChoice === "Scissors"){
             results.textContent = "You win! Rock beats Scissors!"
             humanScore += 1
+            updateScore()
         } else if (computerChoice === "Paper"){
             results.textContent = "You lose! Paper beats Rock!"
             computerScore += 1
+            updateScore()
         } else {
             results.textContent = "It's a tie!"
         }
@@ -41,9 +42,11 @@ function playRound(humanChoice, computerChoice){
         if(computerChoice === "Rock"){
             results.textContent = "You win! Paper beats Rock!"
             humanScore += 1
+            updateScore()
         } else if (computerChoice === "Scissors"){
             results.textContent = "You lose! Scissors beats Paper!"
             computerScore += 1
+            updateScore()
         } else {
             results.textContent ="It's a tie!"
         }
@@ -51,13 +54,16 @@ function playRound(humanChoice, computerChoice){
         if (computerChoice === "Paper"){
             results.textContent = "You win! Scissors beats Paper!"
             humanScore += 1
+            updateScore()
         } else if (computerChoice === "Rock"){
             results.textContent = "You lose! Rock beats scissors!"
             computerScore += 1
+            updateScore()
         } else {
             results.textContent = "It's a tie!"
         }
     }
+
     if(humanScore === 5){
         score.textContent = "You win the game!"
     } else if (computerScore === 5){
@@ -69,6 +75,11 @@ function resetGame() {
     humanScore = 0
     computerScore = 0
     document.querySelector("#results") = ""
+    updateScore()
+}
+
+function updateScore() {
+    score.textContent = `Player: ${humanScore} | Computer: ${computerScore}`
 }
     
 
